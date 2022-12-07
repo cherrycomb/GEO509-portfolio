@@ -15,11 +15,12 @@
         body {
             margin: 0;
             padding: 0;
-            background: #afc1d3;
-            font-family: 'Barlow', sans-serif;
+            background: #b3c1d4;
+            font-family: 'Rubik' sans-serif;
             font-weight: 400;
             color: #272727;
         }
+        
 
         section, footer, header {
             width: 80%;
@@ -36,7 +37,7 @@
         h1 {
             font-weight: 700;
             font-size: 4em;
-            text-transform: uppercase;
+            text-transform: none;
             margin: 10px 0;
             /* color: rgb(202, 130, 34); */
         }
@@ -47,7 +48,7 @@
         }
 
         h3 {
-            font-family: 'Barlow', sans-serif;
+            font-family: 'Rubik', sans-serif;
             font-weight: 700;
             color: gray;
             font-size: 1.5em;
@@ -101,6 +102,52 @@
             border-bottom: 1px solid #3d3d3d;
             padding-top: 20px;
         }
+        .sidenav {
+  width: 110px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #373128;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a>Jump to:</a>
+  <a href='https://uky-gis.github.io/geo509/report-2022/'>Final Report</a>
+  <a href="#community">Community</a>
+  <a href="#infrastructure">Infrastructure</a>
+  <a href="#inundation">Inundation</a>
+  <a href="#terrain">Terrain</a>
+  <a href="#credits">Credits</a>
+</div>
     </style>
 </head>
 
@@ -118,31 +165,30 @@
     </header>
 
     <section>
-        <h2>01: Community</h2>
+        <h2 id="community">01: Community</h2>
         <img src='./images/L1_th.jpg' class="max-image-width">
         <a href='./images/L1.jpg' class="linkbox">High resolution version</a>
     </section>
     <section>
-        <h2>02: Infrastructure</h2>
+        <h2 id="infrastructure">02: Infrastructure</h2>
         <img src='./images/L2_th.jpg' class="max-image-width">
         <a href='./images/L2.jpg' class="linkbox">High resolution version</a>
     </section>
     <section>
-        <h2>03: Inundation</h2>
+        <h2 id="inundation">03: Inundation</h2>
     
             <!-- <img src='./images/inundation_outline.png' class="max-image-width"> -->
         
         <iframe width="100%" height="400" src="https://youtube.com/embed/lMuO5gPSR4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
     <section>
-        <h2>04: Terrain</h2>
+        <h2 id="terrain">04: Terrain</h2>
         <img src='./images/L4_th.jpg' class="max-image-width">
         <a href='./images/L4.jpg' class="linkbox">High resolution version</a>
     </section>
     <footer>
 
-        <h3>Sources & Credits</h3>
-
+        <h3 id="credits">Sources & Credits</h3>
         <p>
             University of Kentucky GEO 509, Fall 2022.
         </p>
